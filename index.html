@@ -59,13 +59,33 @@ h1 {
 <div class="container">
     <h1>Happy Valentine’s Day 💖</h1>
 
-    <div class="letter" onclick="openLetter(this)"></div>
-
-    <p style="color:white;">Click to open the letter. 💌</p>
+    <div class="letter" onclick="goNext(this)"></div>
+   <p style="color:white;">Click to open the letter. 💌</p>
 </div>
 
+<script>
+function goNext(el) {
+  el.classList.add("open");
+
+  setTimeout(() => {
+    window.location.href = "season.html";
+  }, 800);
+}
+</script>
+
+ 
 <!-- เพลง -->
-<audio id="music" src="music.mp3"></audio>
+<audio id="bgmusic" src="Love Story.mp3"></audio>
+
+<script>
+function goNext(el) {
+  el.classList.add("open");
+
+  var music = document.getElementById("bgmusic");
+  music.play();
+
+
+</script>
 
 <script>
 function openLetter(el) {
@@ -94,5 +114,6 @@ setInterval(() => {
 </script>
 
 </body>
+
 
 </html>
